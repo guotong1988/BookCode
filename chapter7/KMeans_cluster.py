@@ -14,5 +14,5 @@ data = pd.read_excel(inputfile) #读取数据
 kmodel = KMeans(n_clusters = k, n_jobs = 4) #n_jobs是并行数，一般等于CPU数较好
 kmodel.fit(data) #训练模型
 
-kmodel.cluster_centers_ #查看聚类中心
-kmodel.labels_ #查看各样本对应的类别
+kmodel.cluster_centers_ #查看聚类中心 #是一个二维数组，column个数是5，也即LRFMC5个属性，row个数是K，也即聚类个数
+kmodel.labels_ #查看各样本对应的类别 #每个元素取值为0-4的一维数组，数组长度是data的row的个数
