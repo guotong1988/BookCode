@@ -21,11 +21,11 @@ net = Sequential() #建立神经网络
 net.add(Dense(10, input_shape=(3,))) #添加输入层（3节点）到隐藏层（10节点）的连接
 net.add(Activation('relu')) #隐藏层使用relu激活函数
 net.add(Dense(1, input_shape=(10,))) #添加隐藏层（10节点）到输出层（1节点）的连接
-#Dense的参数把书里的改了，否则报错 Layer is not connected. Did you forget to set "input_shape"?
+'''Dense的参数把书里的改了，否则报错 Layer is not connected. Did you forget to set "input_shape"?'''
 net.add(Activation('sigmoid')) #输出层使用sigmoid激活函数
 net.compile(loss = 'binary_crossentropy', optimizer = 'adam', class_mode = "binary") #编译模型，使用adam方法求解
 
-net.fit(train[:,:3], train[:,3], nb_epoch=1000, batch_size=1) #训练模型，循环1000次
+net.fit(train[:,:3], train[:,3], nb_epoch=1000, batch_size=1) #训练模型，循环1000次 #前三列是神经网络的输入X，第四列是输出Y
 net.save_weights(netfile) #保存模型
 
 predict_result = net.predict_classes(train[:,:3]).reshape(len(train)) #预测结果变形
