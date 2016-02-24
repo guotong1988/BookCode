@@ -1,5 +1,5 @@
 #-*- coding: utf-8 -*-
-def cm_plot(y, yp):#y和yp都是每个元素的值为0或1的数组
+def cm_plot(y, yp):'''y和yp都是每个元素的值为0或1的数组'''
   
   from sklearn.metrics import confusion_matrix #导入混淆矩阵函数
 
