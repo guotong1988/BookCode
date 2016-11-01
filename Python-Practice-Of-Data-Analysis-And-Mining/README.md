@@ -1,6 +1,6 @@
 #《Python数据分析与挖掘实战》
 
-#《Python机器学习及实践》
+《Python Practice Of Data Analysis And Mining》
 
 源码的更详细的注释
 
